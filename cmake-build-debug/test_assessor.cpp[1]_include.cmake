@@ -1,0 +1,5 @@
+if(EXISTS "/home/noahr/CLionProjects/poker/cmake-build-debug/test_assessor.cpp[1]_tests.cmake")
+  include("/home/noahr/CLionProjects/poker/cmake-build-debug/test_assessor.cpp[1]_tests.cmake")
+else()
+  add_test(test_assessor.cpp_NOT_BUILT test_assessor.cpp_NOT_BUILT)
+endif()

@@ -1,0 +1,15 @@
+# ninja log v5
+1	263	1671463810297397991	CMakeFiles/poker.dir/Assessor.cpp.o	4335b0f24ff2fa71
+0	25	1671463980875569402	build.ninja	9d5f639fd6bbeac1
+394	468	1671463563838246079	poker	d54ad0ecd725dfa2
+0	271	1671418225401869926	CMakeFiles/poker.dir/test_assessor.cpp.o	ba76afdf8751aaa3
+1	405	1671463903036481009	CMakeFiles/poker.dir/main.cpp.o	a1eb4aa6a00ffe64
+1	399	1671463903029814415	CMakeFiles/poker.dir/CardDeck.cpp.o	8f2f4741a27cc5ec
+1	389	1671463987408821571	CMakeFiles/poker.dir/main.cpp.o	a1eb4aa6a00ffe64
+0	403	1671463987422154738	CMakeFiles/poker.dir/CardDeck.cpp.o	8f2f4741a27cc5ec
+0	386	1671464034621550346	CMakeFiles/poker.dir/main.cpp.o	a1eb4aa6a00ffe64
+0	410	1671464034644883376	CMakeFiles/poker.dir/CardDeck.cpp.o	8f2f4741a27cc5ec
+410	482	1671464034714882458	poker	d54ad0ecd725dfa2
+1	441	1671466896967928297	CMakeFiles/poker.dir/main.cpp.o	a1eb4aa6a00ffe64
+1	462	1671466896987927464	CMakeFiles/poker.dir/CardDeck.cpp.o	8f2f4741a27cc5ec
+462	544	1671466897067924134	poker	d54ad0ecd725dfa2
