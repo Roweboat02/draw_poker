@@ -12,4 +12,4 @@ add_executable(
         CardDeck.h
         main.cpp
         PlayerHand.cpp
-        PlayerHand.h main.cpp main.cpp PlayerBank.cpp PlayerBank.h)
+        PlayerHand.h main.cpp main.cpp PlayerBank.cpp PlayerBank.h Game.cpp Game.h Player.cpp Player.h AssesmentTable.cpp AssesmentTable.h)

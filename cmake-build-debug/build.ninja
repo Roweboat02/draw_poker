@@ -79,6 +79,24 @@ build CMakeFiles/poker.dir/PlayerBank.cpp.o: CXX_COMPILER__poker_Debug /home/noa
   OBJECT_DIR = CMakeFiles/poker.dir
   OBJECT_FILE_DIR = CMakeFiles/poker.dir
 
+build CMakeFiles/poker.dir/Game.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/Game.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/Game.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+
+build CMakeFiles/poker.dir/Player.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/Player.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/Player.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+
+build CMakeFiles/poker.dir/AssesmentTable.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/AssesmentTable.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/AssesmentTable.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target poker
@@ -87,7 +105,7 @@ build CMakeFiles/poker.dir/PlayerBank.cpp.o: CXX_COMPILER__poker_Debug /home/noa
 #############################################
 # Link the executable poker
 
-build poker: CXX_EXECUTABLE_LINKER__poker_Debug CMakeFiles/poker.dir/Assessor.cpp.o CMakeFiles/poker.dir/CardDeck.cpp.o CMakeFiles/poker.dir/main.cpp.o CMakeFiles/poker.dir/PlayerHand.cpp.o CMakeFiles/poker.dir/PlayerBank.cpp.o
+build poker: CXX_EXECUTABLE_LINKER__poker_Debug CMakeFiles/poker.dir/Assessor.cpp.o CMakeFiles/poker.dir/CardDeck.cpp.o CMakeFiles/poker.dir/main.cpp.o CMakeFiles/poker.dir/PlayerHand.cpp.o CMakeFiles/poker.dir/PlayerBank.cpp.o CMakeFiles/poker.dir/Game.cpp.o CMakeFiles/poker.dir/Player.cpp.o CMakeFiles/poker.dir/AssesmentTable.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/poker.dir
   POST_BUILD = :
