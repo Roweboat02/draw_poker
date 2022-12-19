@@ -15,41 +15,30 @@ Assessor::Assessor(Card hand[]){
                 hand_value=ROYAL_FLUSH;
                 return;
             }
+            i++;
         }
         hand_value=STRAIGHT_FLUSH;
         return;
     } else if (flush) {hand_value=FLUSH; return;}
     else if (straight) {hand_value=STRAIGHT; return;}
-    int counts[5] = {0,0,0,0,0,};
-    int count_of_counts[3] = {0,0,0};
-    count_cards(hand, counts);
-    count_counts(counts, count_of_counts);
 
-    if (count_of_counts[2]>0) {
-        hand_value=FOUR_OF_A_KIND;
-        return;
-    } else if (count_of_counts[1]==3 && count_of_counts[0]==2){
-        hand_value=FULL_HOUSE;
-        return;
-    } else if (count_of_counts[0]==4){
-        hand_value=TWO_PAIR;
-        return;
-    } else if (count_of_counts[0]==2){
-        hand_value=PAIR;
-        return;
-    }
-
+    int groupings[3] = {0,0,0};
+    count_cards(hand, groupings);
+    hand_value = counts_to_groups(groupings);
 }
 
 void count_suit_occurences(Card hand[], int out[4]){
     for (int suit=0; suit<4; suit++){
         int i=0;
         while(hand[i].val!=0){
-            if (hand[i].suit==suit){out[suit]++;}
+            if (hand[i].suit==suit){
+                out[suit]++;
+            }
+            i++;
         }
     }
 }
-bool Assessor::is_flush(Card hand[5]){
+bool Assessor::is_flush(Card hand[]){
     int suit_counts[4]={0,0,0,0};
     count_suit_occurences(hand, suit_counts);
     for (int suit_count : suit_counts){
@@ -58,48 +47,59 @@ bool Assessor::is_flush(Card hand[5]){
     return false;
 }
 
-bool Assessor::is_straight(Card hand[]){
-    // Find min card value
-
-    int min_val=hand[0].val;
+short hand_as_val_set(Card hand[]){
+    short val_set = 0;
     int i=0;
     while (hand[i].val!=0){
-        if (hand[i].val<min_val){min_val=hand[i].val;}
+        val_set |= 1<<(hand[i].val-1);
+        i++;
     }
-    bool possible=true;
-    int loops=0;
-
-
-    while (possible)
-    {
-        loops++;
-        for (int i=0; i<5; i++){
-            if (hand[i].val==min_val+loops){break;}
-            if(i==4){possible=false;}
-            // If none of cards are req'd val, not straight
-        }
-        if (loops==4){break;}
-        // If 5 cards are present, in ascending order, finish
-    }
-    return possible;
-
+    return val_set;
 }
 
-void Assessor::count_cards(Card hand[5], int out[5]){
-    for (int i=0; i<5; i++){
-        for (int j=0; j<6; j++){
-            if(hand[i].val==hand[j].val){out[i]++;}
+bool Assessor::is_straight(Card hand[]){
+    // Find min card value
+    short val_set = hand_as_val_set(hand);
+    short answer = 0b11111;
+    int i=0;
+    while (hand[i].val!=0){
+        answer <<= i;
+        if ((answer & val_set) == answer){
+            return true;
         }
+        i++;
     }
+    return false;
 }
 
-void Assessor::count_counts(int counts[5], int out[3]){
-    // Returns array containing {count of 2's, count of 3's, count of 4's}
-    for (int i=0; i<3; i++){
-        for (int j=0; j<5; j++){
-            if(i+2==counts[j]){
-                out[i]++;
+void Assessor::count_cards(Card hand[], int out[3]){
+    // out {pairs, three of a kind, four of a kind}
+    bool vals_in_hand[13] = {0,0,0,0,0,0,0,0,0,0,0,0,0};
+    int i =0;
+    while (hand[i].val!=0){
+        vals_in_hand[hand[i].val-2] = true;
+        i++;
+    }
+    for (int card_val = TWO; card_val<=ACE; card_val++){
+        if (!vals_in_hand[card_val-2]){ continue;}
+        int card_index = 0;
+        int count = 0;
+        while (hand[card_index].val!=0){
+            if(hand[card_index].val == card_val){
+                count++;
             }
+            card_index++;
         }
+        if((count-2)>-1){out[count-2]++;}
     }
+}
+
+int Assessor::counts_to_groups(const int counts[3]){
+    // Returns array containing {count of 2's, count of 3's, count of 4's}
+    if (counts[2]>0){return FOUR_OF_A_KIND;}
+    else if (counts[1]==1 && counts[0]==1){return FULL_HOUSE;}
+    else if (counts[1]==1){return THREE_OF_A_KIND;}
+    else if (counts[0]==2){return TWO_PAIR;}
+    else if (counts[0]==1){return PAIR;}
+    else {return HIGH_CARD;}
 }
