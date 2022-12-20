@@ -35,7 +35,7 @@ add_library(playerlib.a player/Player.h ${PLAYER})
 target_include_directories(gamelib.a PRIVATE game)
 target_include_directories(playerlib.a PRIVATE player)
 
-
+file(COPY scoring.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(poker
         main.cpp

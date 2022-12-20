@@ -22,9 +22,6 @@ public:
     int read_scoring_line();
 
     AssesmentTable(){
-        char buffer[PATH_MAX];
-        std::cout<<"ME_SA"<<std::endl;
-        std::cout<< getcwd(buffer, sizeof(buffer))<<std::endl;
         read_scoring();
     }
     int assess(int hand_value);

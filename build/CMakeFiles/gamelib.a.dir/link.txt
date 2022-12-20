@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgamelib.a.a CMakeFiles/gamelib.a.dir/game/AssesmentTable.cpp.o CMakeFiles/gamelib.a.dir/game/Assessor.cpp.o CMakeFiles/gamelib.a.dir/game/CardDeck.cpp.o CMakeFiles/gamelib.a.dir/game/Game.cpp.o
+/usr/bin/ranlib libgamelib.a.a
