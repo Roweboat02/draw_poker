@@ -4,7 +4,7 @@
 
 #include "Game.h"
 
-void Game::advance() {
+void Game::advance_stage() {
     switch (stage){
         case FIRST_DEAL:
             first_deal();
@@ -39,39 +39,7 @@ void Game::second_deal() {
 
 void Game::assess() {
     Assessor ass = Assessor(player.ptr_for_cards());
-    int winnings = 0;
-    switch(ass.hand_value){
-        case HIGH_CARD:
-            winnings=0;
-            break;
-        case PAIR:
-            winnings=5;
-            break;
-        case TWO_PAIR:
-            winnings=10;
-            break;
-        case THREE_OF_A_KIND:
-            winnings=15;
-            break;
-        case STRAIGHT:
-            winnings=20;
-            break;
-        case FLUSH:
-            winnings=25;
-            break;
-        case FULL_HOUSE:
-            winnings=40;
-            break;
-        case FOUR_OF_A_KIND:
-            winnings=125;
-            break;
-        case STRAIGHT_FLUSH:
-            winnings=250;
-            break;
-        case ROYAL_FLUSH:
-            winnings=1000;
-            break;
-    }
+    int winnings = ass_table.assess(ass.hand_value);
     player.add_winnings(winnings);
 }
 

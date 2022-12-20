@@ -3,6 +3,7 @@
 //
 
 #include "Assessor.h"
+#include "enum_hand.h"
 
 Assessor::Assessor(Card hand[]){
     flush = is_flush(hand);

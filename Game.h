@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "Assessor.h"
 #include "CardDeck.h"
+#include "AssesmentTable.h"
 
 enum Stage{FIRST_DEAL, SECOND_DEAL, ASSESS};
 
@@ -20,13 +21,15 @@ private:
 
     CardDeck deck;
 
+    AssesmentTable ass_table;
+
     void first_deal();
 
     void second_deal();
 
     void assess();
 public:
-    void advance();
+    void advance_stage();
 };
 
 
