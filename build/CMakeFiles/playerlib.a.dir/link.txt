@@ -1,2 +1,0 @@
-/usr/bin/ar qc libplayerlib.a.a CMakeFiles/playerlib.a.dir/player/Player.cpp.o CMakeFiles/playerlib.a.dir/player/PlayerBank.cpp.o CMakeFiles/playerlib.a.dir/player/PlayerHand.cpp.o
-/usr/bin/ranlib libplayerlib.a.a

@@ -1,5 +1,0 @@
-/home/noahr/CLionProjects/poker/build/CMakeFiles/gamelib.a.dir
-/home/noahr/CLionProjects/poker/build/CMakeFiles/playerlib.a.dir
-/home/noahr/CLionProjects/poker/build/CMakeFiles/poker.dir
-/home/noahr/CLionProjects/poker/build/CMakeFiles/edit_cache.dir
-/home/noahr/CLionProjects/poker/build/CMakeFiles/rebuild_cache.dir
