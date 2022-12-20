@@ -4,6 +4,6 @@
 
 #include "Player.h"
 
-Card *Player::ptr_for_deal() {
+Card *Player::ptr_for_cards() {
     return hand.hand;
 }

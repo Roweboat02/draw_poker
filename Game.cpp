@@ -24,7 +24,7 @@ void Game::advance() {
 void Game::first_deal() {
     deck = CardDeck();
     player.bet();
-    Card* arr = player.ptr_for_deal();
+    Card* arr = player.ptr_for_cards();
     deck.draw(5,arr);
     arr[5]=Card();
 }
@@ -38,7 +38,7 @@ void Game::second_deal() {
 }
 
 void Game::assess() {
-    Assessor ass = Assessor(player.ptr_for_deal());
+    Assessor ass = Assessor(player.ptr_for_cards());
     int winnings = 0;
     switch(ass.hand_value){
         case HIGH_CARD:

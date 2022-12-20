@@ -14,7 +14,7 @@ class Player {
         PlayerBank bank;
         PlayerHand hand;
 
-        Card* ptr_for_deal();
+        Card* ptr_for_cards();
         void bet(){bank.place_bet();}
         void add_winnings(int winnings){ bank.add_winnings(winnings); bank.clear_bet();}
         int cards_to_replace(){return 5-hand.number_of_held();}
