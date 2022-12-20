@@ -60,11 +60,12 @@ short hand_as_val_set(Card hand[]){
 bool Assessor::is_straight(Card hand[]){
     // Find min card value
     short val_set = hand_as_val_set(hand);
-    short answer = 0b11111;
+    int answer = 0b11111;
+    int ans = answer;
     int i=0;
-    while (hand[i].val!=0){
-        answer <<= i;
-        if ((answer & val_set) == answer){
+    while (ans<0b111110000000000){
+        ans = answer << i;
+        if ((ans & val_set) == ans){
             return true;
         }
         i++;

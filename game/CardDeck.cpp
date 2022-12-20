@@ -6,8 +6,8 @@
 #include "CardDeck.h"
 
 CardDeck::CardDeck() {
-    for (int i=0; i<15; i++){
-        spent_cards[i] = 0;
+    for (bool & spent_card : spent_cards){
+        spent_card = false;
     }
 }
 
@@ -37,9 +37,10 @@ Card CardDeck::random_card() {
         int suit = random_suit();
         int val = random_val();
         int future_card = suit*14 + val;
-        for (int & spent_card : spent_cards){
-            if (spent_card==future_card){break;}
-            else {return {val, suit};}
+
+        if (!spent_cards[future_card]){
+            spent_cards[future_card] = true;
+            return {val, suit};
         }
     }
 }

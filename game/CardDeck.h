@@ -11,12 +11,12 @@
 
 class CardDeck {
     private:
-        int spent_cards[15];
         int rand_num(int low, int high);
         int random_suit();  // return 0,1,2,3
         int random_val();  // return 2,3,4,5,6,7,8,9,10,11,12,13,14
         Card random_card(); // Card::from_int(random_suit*14 + random_val) if not in spent_cards
     public:
+        bool spent_cards[56];
         CardDeck();
         void draw(int n, Card out[]);
 };

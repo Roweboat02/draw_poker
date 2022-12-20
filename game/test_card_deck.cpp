@@ -4,7 +4,25 @@
 #include <iostream>
 #include "CardDeck.h"
 
-int main(){
+bool draw_52(){
+    CardDeck cd = CardDeck();
+    Card full_deck[53];
+    full_deck[52] = Card();
+    cd.draw(52, full_deck);
+
+    bool correct = true;
+
+    for (int i = 0; i < 51; ++i) {
+        for (int j = i+1; j < 52; ++j) {
+            correct = correct &&
+                    !(full_deck[i].val==full_deck[j].val && full_deck[i].suit==full_deck[j].suit);
+            cd.spent_cards;
+        }
+    }
+    return correct;
+}
+
+bool generic_test(){
     Card vals0[20];
     Card vals1[5];
     CardDeck().draw(20,vals0);
@@ -33,4 +51,8 @@ int main(){
         vals0[i].card_as_two_char(card_symbol);
         std::cout << card_symbol << std::endl;
     }
+}
+
+int main(){
+    std::cout << draw_52();
 }

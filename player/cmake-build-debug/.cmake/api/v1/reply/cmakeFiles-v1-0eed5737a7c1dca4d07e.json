@@ -728,8 +728,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/home/noahr/CLionProjects/poker/game/cmake-build-debug",
-		"source" : "/home/noahr/CLionProjects/poker/game"
+		"build" : "/home/noahr/CLionProjects/poker/player/cmake-build-debug",
+		"source" : "/home/noahr/CLionProjects/poker/player"
 	},
 	"version" : 
 	{
