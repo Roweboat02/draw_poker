@@ -2,7 +2,6 @@
 // Created by noahr on 19/12/22.
 //
 
-#include <fstream>
 #include "AssesmentTable.h"
 
 int AssesmentTable::assess(int hand_value) {
@@ -42,33 +41,39 @@ int AssesmentTable::assess(int hand_value) {
 }
 
 void AssesmentTable::read_scoring() {
-    std::fstream score_file;
     score_file.open(filename, std::ios::in);
-
-    char ch;
-    char possible_nums[3];
-
-    char* possible_num = possible_nums;
     int* score_ptr = scores;
 
-    while(score_ptr!=&scores[9]){
-        score_file >> ch;
-        if (ch=='#'){
-            while (ch!='\n'){
-                *possible_num=ch;
-                score_file>>ch;
-            }}
+    while(score_ptr!=&scores[10]){
+        *score_ptr = read_scoring_line();
+        score_ptr++;
+    }
+}
+
+int AssesmentTable::read_scoring_line() {
+    while (score_file.is_open()) {
+
+        char chrs[20] = "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0";
+        char* chr_ptr = chrs;
+
+        score_file >> chrs;
+
+        if (chrs[0]=='#'){ continue;}
         else {
-            while (ch!='\n'){
-                *possible_num=ch;
-                possible_num++;
-                score_file>>ch;
+            char str[4] = "\0\0\0";
+            char* st = str;
+            while(*chr_ptr!='\0'){
+                *st = *chr_ptr;
+                chr_ptr++;
+                st++;
             }
-            *score_ptr= std::stoi(possible_nums);
-            score_ptr++;
+
+            return std::stoi(str);
         }
     }
 }
+
+
 
 
 

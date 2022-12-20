@@ -6,17 +6,22 @@
 #define POKER_ASSESMENTTABLE_H
 
 
+#include <fstream>
 #include "card.h"
 #include "enum_hand.h"
 
 class AssesmentTable {
 private:
-    const char *filename = "./scoring.txt";
+public:
+    const char *filename = "scoring.txt";
+    std::fstream score_file;
     int scores[10];
     void read_scoring();
-public:
+    int read_scoring_line();
 
-    AssesmentTable(){read_scoring();}
+    AssesmentTable(){
+        read_scoring();
+    }
     int assess(int hand_value);
 };
 

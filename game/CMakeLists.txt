@@ -4,22 +4,22 @@ project(game)
 set(CMAKE_CXX_STANDARD 14)
 
 set(GAME
-        game/AssesmentTable.h
-        game/AssesmentTable.cpp
-        game/Assessor.h
-        game/Assessor.cpp
-        game/card.h
-        game/CardDeck.h
-        game/CardDeck.cpp
-        game/enum_hand.h
-        game/enum_card.h
-        game/Game.h
-        game/Game.cpp
+        AssesmentTable.h
+        AssesmentTable.cpp
+        Assessor.h
+        Assessor.cpp
+        card.h
+        CardDeck.h
+        CardDeck.cpp
+        enum_hand.h
+        enum_card.h
+        Game.h
+        Game.cpp
         )
 
 
 add_executable(poker
-        main.cpp
+        game_main.cpp
         ${GAME}
 )
 

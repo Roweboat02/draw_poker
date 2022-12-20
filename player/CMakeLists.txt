@@ -5,19 +5,19 @@ set(CMAKE_CXX_STANDARD 14)
 
 
 set (PLAYER
-        player/card.h
-        player/enum_hand.h
-        player/enum_card.h
-        player/Player.h
-        player/Player.cpp
-        player/PlayerBank.h
-        player/PlayerBank.cpp
-        player/PlayerHand.h
-        player/PlayerHand.cpp
+        card.h
+        enum_hand.h
+        enum_card.h
+        Player.h
+        Player.cpp
+        PlayerBank.h
+        PlayerBank.cpp
+        PlayerHand.h
+        PlayerHand.cpp
         )
 
 add_executable(player
-        main.cpp
+        player_main.cpp
         ${PLAYER}
 )
 

@@ -39,10 +39,13 @@ target_include_directories(playerlib.a PRIVATE player)
 
 add_executable(poker
         main.cpp
-        ${GAME}
-        ${PLAYER}
+        PokerCLI.cpp
+        PokerCLI.h
+#        ${GAME}
+#        ${PLAYER}
 )
-
-target_include_directories(poker PRIVATE game player)
+target_link_libraries(poker PRIVATE gamelib.a)
+target_link_libraries(poker PRIVATE playerlib.a)
+#target_include_directories(poker PRIVATE game player)
 
 
