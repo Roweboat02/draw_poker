@@ -3,7 +3,6 @@
 //
 #include <list>
 #include <random>
-#include <chrono>
 #include "card.h"
 
 #ifndef POKER_CARDDECK_H
@@ -12,7 +11,6 @@
 
 class CardDeck {
     private:
-
         int spent_cards[15];
         int rand_num(int low, int high);
         int random_suit();  // return 0,1,2,3

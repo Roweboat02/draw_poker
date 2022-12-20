@@ -36,10 +36,12 @@ int AssesmentTable::assess(int hand_value) {
 
         case ROYAL_FLUSH:
             return scores[9];
+        default:
+            return 0;
     }
 }
 
-int *AssesmentTable::read_scoring() {
+void AssesmentTable::read_scoring() {
     std::fstream score_file;
     score_file.open(filename, std::ios::in);
 

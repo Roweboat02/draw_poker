@@ -15,7 +15,9 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -30,7 +32,9 @@
 					"name" : "poker",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1,
+						2
 					]
 				}
 			],
@@ -38,8 +42,22 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "gamelib.a::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-gamelib.a-Debug-24fd8c359da187c15788.json",
+					"name" : "gamelib.a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "playerlib.a::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-playerlib.a-Debug-ad0532ebf18082fa54d5.json",
+					"name" : "playerlib.a",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "poker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-poker-Debug-64ed80ec9074ca1260af.json",
+					"jsonFile" : "target-poker-Debug-fd3509fd843ad33fba4e.json",
 					"name" : "poker",
 					"projectIndex" : 0
 				}

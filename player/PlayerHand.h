@@ -19,10 +19,9 @@ class PlayerHand {
         void add_to_holding(int index);  // Index of card in hand, to hold
         void remove_from_holding(int index);  // Index of card in hand/hold, to remove from hold
 
-        explicit PlayerHand(Card _hand[5]){
-            for (int i=0; i<5; i++) { hand[i] = _hand[i];}
-            clear_holding();
-        };
+
+
+        PlayerHand(){clear_holding();};
 
     private:
         void clear_holding();

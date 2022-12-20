@@ -41,6 +41,105 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/noahr/CLionProjects/poker/cmake-build-debug/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target gamelib.a
+
+
+#############################################
+# Order-only phony target for gamelib.a
+
+build cmake_object_order_depends_target_gamelib.a: phony || CMakeFiles/gamelib.a.dir
+
+build CMakeFiles/gamelib.a.dir/game/AssesmentTable.cpp.o: CXX_COMPILER__gamelib.2ea_Debug /home/noahr/CLionProjects/poker/game/AssesmentTable.cpp || cmake_object_order_depends_target_gamelib.a
+  DEP_FILE = CMakeFiles/gamelib.a.dir/game/AssesmentTable.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game
+  OBJECT_DIR = CMakeFiles/gamelib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/gamelib.a.dir/game
+
+build CMakeFiles/gamelib.a.dir/game/Assessor.cpp.o: CXX_COMPILER__gamelib.2ea_Debug /home/noahr/CLionProjects/poker/game/Assessor.cpp || cmake_object_order_depends_target_gamelib.a
+  DEP_FILE = CMakeFiles/gamelib.a.dir/game/Assessor.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game
+  OBJECT_DIR = CMakeFiles/gamelib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/gamelib.a.dir/game
+
+build CMakeFiles/gamelib.a.dir/game/CardDeck.cpp.o: CXX_COMPILER__gamelib.2ea_Debug /home/noahr/CLionProjects/poker/game/CardDeck.cpp || cmake_object_order_depends_target_gamelib.a
+  DEP_FILE = CMakeFiles/gamelib.a.dir/game/CardDeck.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game
+  OBJECT_DIR = CMakeFiles/gamelib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/gamelib.a.dir/game
+
+build CMakeFiles/gamelib.a.dir/game/Game.cpp.o: CXX_COMPILER__gamelib.2ea_Debug /home/noahr/CLionProjects/poker/game/Game.cpp || cmake_object_order_depends_target_gamelib.a
+  DEP_FILE = CMakeFiles/gamelib.a.dir/game/Game.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game
+  OBJECT_DIR = CMakeFiles/gamelib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/gamelib.a.dir/game
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gamelib.a
+
+
+#############################################
+# Link the static library libgamelib.a.a
+
+build libgamelib.a.a: CXX_STATIC_LIBRARY_LINKER__gamelib.2ea_Debug CMakeFiles/gamelib.a.dir/game/AssesmentTable.cpp.o CMakeFiles/gamelib.a.dir/game/Assessor.cpp.o CMakeFiles/gamelib.a.dir/game/CardDeck.cpp.o CMakeFiles/gamelib.a.dir/game/Game.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/gamelib.a.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libgamelib.a.a
+  TARGET_PDB = gamelib.a.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target playerlib.a
+
+
+#############################################
+# Order-only phony target for playerlib.a
+
+build cmake_object_order_depends_target_playerlib.a: phony || CMakeFiles/playerlib.a.dir
+
+build CMakeFiles/playerlib.a.dir/player/Player.cpp.o: CXX_COMPILER__playerlib.2ea_Debug /home/noahr/CLionProjects/poker/player/Player.cpp || cmake_object_order_depends_target_playerlib.a
+  DEP_FILE = CMakeFiles/playerlib.a.dir/player/Player.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/player
+  OBJECT_DIR = CMakeFiles/playerlib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/playerlib.a.dir/player
+
+build CMakeFiles/playerlib.a.dir/player/PlayerBank.cpp.o: CXX_COMPILER__playerlib.2ea_Debug /home/noahr/CLionProjects/poker/player/PlayerBank.cpp || cmake_object_order_depends_target_playerlib.a
+  DEP_FILE = CMakeFiles/playerlib.a.dir/player/PlayerBank.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/player
+  OBJECT_DIR = CMakeFiles/playerlib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/playerlib.a.dir/player
+
+build CMakeFiles/playerlib.a.dir/player/PlayerHand.cpp.o: CXX_COMPILER__playerlib.2ea_Debug /home/noahr/CLionProjects/poker/player/PlayerHand.cpp || cmake_object_order_depends_target_playerlib.a
+  DEP_FILE = CMakeFiles/playerlib.a.dir/player/PlayerHand.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/player
+  OBJECT_DIR = CMakeFiles/playerlib.a.dir
+  OBJECT_FILE_DIR = CMakeFiles/playerlib.a.dir/player
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target playerlib.a
+
+
+#############################################
+# Link the static library libplayerlib.a.a
+
+build libplayerlib.a.a: CXX_STATIC_LIBRARY_LINKER__playerlib.2ea_Debug CMakeFiles/playerlib.a.dir/player/Player.cpp.o CMakeFiles/playerlib.a.dir/player/PlayerBank.cpp.o CMakeFiles/playerlib.a.dir/player/PlayerHand.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/playerlib.a.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libplayerlib.a.a
+  TARGET_PDB = playerlib.a.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target poker
 
 
@@ -49,59 +148,61 @@ cmake_ninja_workdir = /home/noahr/CLionProjects/poker/cmake-build-debug/
 
 build cmake_object_order_depends_target_poker: phony || CMakeFiles/poker.dir
 
-build CMakeFiles/poker.dir/Assessor.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/Assessor.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/Assessor.cpp.o.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
-
-build CMakeFiles/poker.dir/CardDeck.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/CardDeck.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/CardDeck.cpp.o.d
-  FLAGS = -g -std=gnu++14
-  OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
-
 build CMakeFiles/poker.dir/main.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/main.cpp || cmake_object_order_depends_target_poker
   DEP_FILE = CMakeFiles/poker.dir/main.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
   OBJECT_FILE_DIR = CMakeFiles/poker.dir
 
-build CMakeFiles/poker.dir/PlayerHand.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/PlayerHand.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/PlayerHand.cpp.o.d
+build CMakeFiles/poker.dir/game/AssesmentTable.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/game/AssesmentTable.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/game/AssesmentTable.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/game
 
-build CMakeFiles/poker.dir/PlayerBank.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/PlayerBank.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/PlayerBank.cpp.o.d
+build CMakeFiles/poker.dir/game/Assessor.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/game/Assessor.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/game/Assessor.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/game
 
-build CMakeFiles/poker.dir/Game.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/Game.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/Game.cpp.o.d
+build CMakeFiles/poker.dir/game/CardDeck.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/game/CardDeck.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/game/CardDeck.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/game
 
-build CMakeFiles/poker.dir/Player.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/Player.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/Player.cpp.o.d
+build CMakeFiles/poker.dir/game/Game.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/game/Game.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/game/Game.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/game
 
-build CMakeFiles/poker.dir/AssesmentTable.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/AssesmentTable.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/AssesmentTable.cpp.o.d
+build CMakeFiles/poker.dir/player/Player.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/player/Player.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/player/Player.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/player
 
-build CMakeFiles/poker.dir/PokerCLI.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/PokerCLI.cpp || cmake_object_order_depends_target_poker
-  DEP_FILE = CMakeFiles/poker.dir/PokerCLI.cpp.o.d
+build CMakeFiles/poker.dir/player/PlayerBank.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/player/PlayerBank.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/player/PlayerBank.cpp.o.d
   FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
   OBJECT_DIR = CMakeFiles/poker.dir
-  OBJECT_FILE_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/player
+
+build CMakeFiles/poker.dir/player/PlayerHand.cpp.o: CXX_COMPILER__poker_Debug /home/noahr/CLionProjects/poker/player/PlayerHand.cpp || cmake_object_order_depends_target_poker
+  DEP_FILE = CMakeFiles/poker.dir/player/PlayerHand.cpp.o.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -I/home/noahr/CLionProjects/poker/game -I/home/noahr/CLionProjects/poker/player
+  OBJECT_DIR = CMakeFiles/poker.dir
+  OBJECT_FILE_DIR = CMakeFiles/poker.dir/player
 
 
 # =============================================================================
@@ -111,7 +212,7 @@ build CMakeFiles/poker.dir/PokerCLI.cpp.o: CXX_COMPILER__poker_Debug /home/noahr
 #############################################
 # Link the executable poker
 
-build poker: CXX_EXECUTABLE_LINKER__poker_Debug CMakeFiles/poker.dir/Assessor.cpp.o CMakeFiles/poker.dir/CardDeck.cpp.o CMakeFiles/poker.dir/main.cpp.o CMakeFiles/poker.dir/PlayerHand.cpp.o CMakeFiles/poker.dir/PlayerBank.cpp.o CMakeFiles/poker.dir/Game.cpp.o CMakeFiles/poker.dir/Player.cpp.o CMakeFiles/poker.dir/AssesmentTable.cpp.o CMakeFiles/poker.dir/PokerCLI.cpp.o
+build poker: CXX_EXECUTABLE_LINKER__poker_Debug CMakeFiles/poker.dir/main.cpp.o CMakeFiles/poker.dir/game/AssesmentTable.cpp.o CMakeFiles/poker.dir/game/Assessor.cpp.o CMakeFiles/poker.dir/game/CardDeck.cpp.o CMakeFiles/poker.dir/game/Game.cpp.o CMakeFiles/poker.dir/player/Player.cpp.o CMakeFiles/poker.dir/player/PlayerBank.cpp.o CMakeFiles/poker.dir/player/PlayerHand.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/poker.dir
   POST_BUILD = :
@@ -146,6 +247,10 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build gamelib.a: phony libgamelib.a.a
+
+build playerlib.a: phony libplayerlib.a.a
+
 # =============================================================================
 # Folder targets.
 
@@ -154,7 +259,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/noahr/CLionProjects/poker/cmake-build-debug
 
-build all: phony poker
+build all: phony libgamelib.a.a libplayerlib.a.a poker
 
 # =============================================================================
 # Built-in targets

@@ -13,10 +13,10 @@ class AssesmentTable {
 private:
     const char *filename = "./scoring.txt";
     int scores[10];
-    int* read_scoring();
+    void read_scoring();
 public:
 
-    AssesmentTable(){}
+    AssesmentTable(){read_scoring();}
     int assess(int hand_value);
 };
 

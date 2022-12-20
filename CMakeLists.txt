@@ -3,13 +3,46 @@ project(poker)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(
-        poker
-        Assessor.cpp
-        Assessor.h
-        card.h
-        CardDeck.cpp
-        CardDeck.h
+set(GAME
+        game/AssesmentTable.h
+        game/AssesmentTable.cpp
+        game/Assessor.h
+        game/Assessor.cpp
+        game/card.h
+        game/CardDeck.h
+        game/CardDeck.cpp
+        game/enum_hand.h
+        game/enum_card.h
+        game/Game.h
+        game/Game.cpp
+        )
+
+set (PLAYER
+        player/card.h
+        player/enum_hand.h
+        player/enum_card.h
+        player/Player.h
+        player/Player.cpp
+        player/PlayerBank.h
+        player/PlayerBank.cpp
+        player/PlayerHand.h
+        player/PlayerHand.cpp
+        )
+
+add_library(gamelib.a game/Game.h ${GAME})
+add_library(playerlib.a player/Player.h ${PLAYER})
+
+target_include_directories(gamelib.a PRIVATE game)
+target_include_directories(playerlib.a PRIVATE player)
+
+
+
+add_executable(poker
         main.cpp
-        PlayerHand.cpp
-        PlayerHand.h main.cpp main.cpp PlayerBank.cpp PlayerBank.h Game.cpp Game.h Player.cpp Player.h AssesmentTable.cpp AssesmentTable.h enum_hand.h PokerCLI.cpp PokerCLI.h)
+        ${GAME}
+        ${PLAYER}
+)
+
+target_include_directories(poker PRIVATE game player)
+
+

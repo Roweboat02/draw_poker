@@ -7,7 +7,7 @@
 
 
 #include "card.h"
-
+#include "enum_hand.h"
 
 
 class Assessor{
@@ -23,7 +23,6 @@ private:
 public:
     int hand_value;
     explicit Assessor(Card hand[5]);
-
 };
 
 

@@ -18,6 +18,7 @@ class PlayerBank {
 
         void add_winnings(int winnings);
 
+        PlayerBank() = default;
 };
 
 

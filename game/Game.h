@@ -6,30 +6,22 @@
 #define POKER_GAME_H
 
 
-#include "Player.h"
 #include "Assessor.h"
 #include "CardDeck.h"
 #include "AssesmentTable.h"
 
-enum Stage{FIRST_DEAL, SECOND_DEAL, ASSESS};
 
 class Game {
 private:
-    Player player;
-
-    int stage;
-
     CardDeck deck;
-
     AssesmentTable ass_table;
-
-    void first_deal();
-
-    void second_deal();
-
-    void assess();
 public:
-    void advance_stage();
+    void first_deal(Card* hand);
+
+    void second_deal(int cards_to_replace, Card* replacement_cards);
+
+    int assess(Card* hand);
+
 };
 
 

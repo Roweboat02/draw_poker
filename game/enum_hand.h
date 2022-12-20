@@ -5,7 +5,7 @@
 #ifndef POKER_HAND_ENUM_H
 #define POKER_HAND_ENUM_H
 
-#endif //POKER_HAND_ENUM_H
+
 
 enum Hands{
     HIGH_CARD,
@@ -18,3 +18,5 @@ enum Hands{
     FOUR_OF_A_KIND,
     STRAIGHT_FLUSH,
     ROYAL_FLUSH};
+
+#endif //POKER_HAND_ENUM_H
