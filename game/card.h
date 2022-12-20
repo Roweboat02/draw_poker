@@ -26,25 +26,25 @@ struct Card {
     // suit*14+value(2,...,14)
     static Card from_int(int card_num){return {card_num%14,card_num/14};}
 
-    void card_as_two_char(char out[]) const{ out[0]=suit_to_char();out[1]=val_to_char();};
+    std::string card_as_str() const{ return suit_to_string()+val_to_char();};
 
     int val;
     int suit;
 
     private:
-        char suit_to_char() const {
+        std::string suit_to_string() const {
             switch (suit) {
                 case (DIAMONDS):
-                    return 'D';
+                    return "\u2666";
                 case (CLUBS):
-                    return 'C';
+                    return "\u2663";
                 case (SPADES):
-                    return 'S';
+                    return "\u2660";
                 case (HEARTS):
-                    return 'H';
+                    return "\u2665";
                 default:
                     std::cout<<suit;
-                    return '#';
+                    return "#";
             }
         }
 

@@ -20,7 +20,7 @@ class Player {
 
         void bank_stats(int* bank_stats);  // bank_stats={total, bet amount}
 
-        void hand_as_str(char* hand_vals); // hand_vals must be 10 chars long
+        std::string hand_as_str(); // hand_vals must be 10 chars long
 
         void holding_vals(bool* held);
 

@@ -12,11 +12,12 @@ void Player::bank_stats(int *bank_stats) {
     bank_stats[0]=bank.total; bank_stats[1]=bank.bet;
 }
 
-void Player::hand_as_str(char *hand_vals) {
+std::string Player::hand_as_str() {
+    std::string str = "";
     for (int i = 0; i < 5; ++i) {
-        hand.hand[i].card_as_two_char(hand_vals);
-        hand_vals+=2;
+        str+=hand.hand[i].card_as_str();
     }
+    return str;
 }
 
 void Player::holding_vals(bool* held_indeces) {

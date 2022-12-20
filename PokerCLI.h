@@ -8,6 +8,7 @@
 
 #include "game/Game.h"
 #include "player/Player.h"
+#include <cstring>
 
 enum State{DEAL0, DECISION0, CARD_DECISION, DEAL1, DECISION1, ASSESS};
 
@@ -20,7 +21,7 @@ class PokerCLI {
     void print_held();
     void print_bank();
     void start();  // trigger initial deal
-    void fold_or_bet();  // type "fold" or "bet"
+    void fold_or_play();  // type "fold" or "bet"
     void modify_holding();  // Add or remove typed index to holding until '\n' is entered
     void second_deal();
     void assess();

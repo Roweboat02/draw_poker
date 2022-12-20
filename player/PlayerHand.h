@@ -22,6 +22,12 @@ class PlayerHand {
 
 
         PlayerHand(){clear_holding();};
+        explicit PlayerHand(Card* given_hand){
+            clear_holding();
+            for (int i = 0; i < 6; ++i) {
+                hand[i]=given_hand[i];
+            }
+        };
 
     private:
         void clear_holding();
