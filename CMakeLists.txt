@@ -15,7 +15,7 @@ set(GAME
         game/enum_card.h
         game/Game.h
         game/Game.cpp
-        )
+        view/View.cpp view/View.h)
 
 set (PLAYER
         player/card.h
@@ -29,23 +29,32 @@ set (PLAYER
         player/PlayerHand.cpp
         )
 
-add_library(gamelib.a game/Game.h ${GAME})
-add_library(playerlib.a player/Player.h ${PLAYER})
+set (VIEW
+        ./view/CardButton.h
+        ./view/CardButton.cpp
+        ./view/PointBoard.h
+        ./view/PointBoard.cpp
+        ./view/View.cpp
+        ./view/View.h
+        )
 
-target_include_directories(gamelib.a PRIVATE game)
-target_include_directories(playerlib.a PRIVATE player)
+add_library(gamelib game/Game.h ${GAME})
+add_library(playerlib player/Player.h ${PLAYER})
+add_library(viewlib view/View.h ${VIEW})
+
+target_include_directories(gamelib PRIVATE game)
+target_include_directories(playerlib PRIVATE player)
+target_include_directories(viewlib PRIVATE view)
 
 file(COPY scoring.txt DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 
 add_executable(poker
-        main.cpp
-        PokerCLI.cpp
-        PokerCLI.h
-#        ${GAME}
-#        ${PLAYER}
-)
-target_link_libraries(poker PRIVATE gamelib.a)
-target_link_libraries(poker PRIVATE playerlib.a)
+        TopLevel.cpp TopLevel.h
+        )
+
+target_link_libraries(poker PRIVATE gamelib)
+target_link_libraries(poker PRIVATE playerlib)
+target_link_libraries(poker PRIVATE viewlib)
 #target_include_directories(poker PRIVATE game player)
 
 

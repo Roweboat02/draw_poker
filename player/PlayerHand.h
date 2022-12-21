@@ -10,7 +10,7 @@
 class PlayerHand {
     public:
         Card hand[6];
-        Card holding[6];
+        bool holding[5];
 
         int number_of_held();  // Count non-zero card's in holding
 

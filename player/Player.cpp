@@ -4,10 +4,6 @@
 
 #include "Player.h"
 
-Card *Player::ptr_for_cards() {
-    return hand.hand;
-}
-
 void Player::bank_stats(int *bank_stats) {
     bank_stats[0]=bank.total; bank_stats[1]=bank.bet;
 }
@@ -22,12 +18,12 @@ std::string Player::hand_as_str() {
 
 void Player::holding_vals(bool* held_indeces) {
     for (int i = 0; i < 5; ++i) {
-        held_indeces[i] = (hand.holding[i].val != 0);
+        held_indeces[i] = hand.holding[i];
     }
 }
 
 void Player::modify_holding(int i) {
-    if (hand.holding[i].val==0){
+    if (hand.holding[i]){
         add_to_holding(i);
     } else {
         remove_from_holding(i);

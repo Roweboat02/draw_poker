@@ -14,7 +14,9 @@ class Player {
         PlayerBank bank = PlayerBank();
         PlayerHand hand = PlayerHand();
 
-        Card* ptr_for_cards();
+        Card* ptr_for_cards() {return hand.hand;}
+        bool* ptr_for_held() {return hand.holding;}
+
         void bet(){bank.place_bet();}
         void fold(){bank.clear_bet();}
 
@@ -25,6 +27,8 @@ class Player {
         void holding_vals(bool* held);
 
         void add_winnings(int winnings){ bank.add_winnings(winnings); bank.clear_bet();}
+
+
 
         int num_cards_to_replace(){return 5 - hand.number_of_held();}
 

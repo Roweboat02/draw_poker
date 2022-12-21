@@ -5,12 +5,11 @@
 #include "PlayerHand.h"
 
 void PlayerHand::clear_holding() {
-    holding[0]=Card();
-    holding[1]=Card();
-    holding[2]=Card();
-    holding[3]=Card();
-    holding[4]=Card();
-    holding[5]=Card();
+    holding[0]= false;
+    holding[1]=false;
+    holding[2]=false;
+    holding[3]=false;
+    holding[4]=false;
 }
 
 int PlayerHand::number_of_held() {
@@ -33,9 +32,9 @@ void PlayerHand::replace_non_held(Card *new_cards) {
 }
 
 void PlayerHand::add_to_holding(int index) {
-    holding[index] = hand[index];
+    holding[index] = true;
 }
 
 void PlayerHand::remove_from_holding(int index) {
-    holding[index] = Card();
+    holding[index] = false;
 }

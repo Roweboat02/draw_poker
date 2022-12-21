@@ -14,7 +14,7 @@
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__gamelib.2ea_Debug
+rule CXX_COMPILER__gamelib_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -24,7 +24,7 @@ rule CXX_COMPILER__gamelib.2ea_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__gamelib.2ea_Debug
+rule CXX_STATIC_LIBRARY_LINKER__gamelib_Debug
   command = $PRE_LINK && /home/noahr/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
@@ -33,7 +33,7 @@ rule CXX_STATIC_LIBRARY_LINKER__gamelib.2ea_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__playerlib.2ea_Debug
+rule CXX_COMPILER__playerlib_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -43,7 +43,26 @@ rule CXX_COMPILER__playerlib.2ea_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__playerlib.2ea_Debug
+rule CXX_STATIC_LIBRARY_LINKER__playerlib_Debug
+  command = $PRE_LINK && /home/noahr/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
+  description = Linking CXX static library $TARGET_FILE
+  restat = $RESTAT
+
+
+#############################################
+# Rule for compiling CXX files.
+
+rule CXX_COMPILER__viewlib_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = /usr/bin/c++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building CXX object $out
+
+
+#############################################
+# Rule for linking CXX static library.
+
+rule CXX_STATIC_LIBRARY_LINKER__viewlib_Debug
   command = $PRE_LINK && /home/noahr/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.3739.54/bin/cmake/linux/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
